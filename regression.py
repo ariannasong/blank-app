@@ -36,24 +36,29 @@ st.pyplot(fig)
 
 
 # Title and Explanation
-st.header("Linear Model Prediction Function")
+import streamlit as st
+import numpy as np
 
-st.markdown(r"""
+# Title and Explanation
+st.title("Linear Model Prediction Function")
+
+st.markdown("""
 ### Task: Implement a Linear Model Prediction Function
+
 To obtain predictions using a linear model, we use the following formula:
 
-\[
+$$
 \hat{y} = \mathbf{X} \hat{\beta}
-\]
+$$
 
 where:
-- \( \mathbf{X} \) is the design matrix, which includes a column of ones,
-- \( \hat{\beta} \) is the coefficient vector,
-- \( \hat{y} \) represents the predicted outcomes.
+- $$ \mathbf{X} $$ is the design matrix, which includes a column of ones,
+- $$ \hat{\beta} $$ is the coefficient vector,
+- $$ \hat{y} $$ represents the predicted outcomes.
 
 Your task is to create a function `linearModelPredict` that:
 - Takes `b`, a 1D array of coefficients, and `X`, a 2D array representing the design matrix.
-- Returns the predictions `y_p` calculated as \( \hat{y} = \mathbf{X} \hat{\beta} \).
+- Returns the predictions `y_p` calculated as $$ \hat{y} = \mathbf{X} \hat{\beta} $$.
 
 ### Implementation
 Below is the code for `linearModelPredict` and a test case to verify its accuracy.
@@ -87,9 +92,9 @@ st.write("Design matrix `X`:\n", X)
 st.write("Predicted values `y_p`:", yp)
 st.write("Dimensionality of `y_p`:", yp.shape)
 
-st.markdown(r"""
+st.markdown("""
 ### Observation
-- The dimensionality of `y_p` is 3, corresponding to the 3 rows (data points) in \( \mathbf{X} \).
+- The dimensionality of `y_p` is 3, corresponding to the 3 rows (data points) in $$ \mathbf{X} $$.
 - If `b` were a 2D array, the output dimensions of `y_p` would vary depending on its shape.
 """)
 
