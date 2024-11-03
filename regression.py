@@ -5,11 +5,11 @@ import pandas as pd
 st.title("Supervised Learning, Linear Models, and Loss Functions")
 st.markdown("""
 ### Overview
-The purpose of this project is to explore the relationship between different variables in a dataset of possums from Australia and New Guinea. This assignment will give you hands-on experience with linear regression and loss functions.
+The purpose of this project is to explore the relationship between different variables in a dataset of possums from Australia and New Guinea.
 """)
 st.subheader("Data Set")
 st.markdown("""
-For this assignment, we will examine data representing possums in Australia and New Guinea. The dataset contains 46 observations on the following 6 variables:
+The dataset contains 46 observations on the following 6 variables:
 """)
 st.write("""
 - **sex**: Sex, either m (male) or f (female).
