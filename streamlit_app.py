@@ -15,7 +15,7 @@ ax.set_title("Tail Length vs Age")
 # Display the plot with Streamlit
 st.pyplot(fig)
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, headddd over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+# st.title("🎈 My new app")
+# st.write(
+#     "Let's start building! For help and inspiration, headddd over to [docs.streamlit.io](https://docs.streamlit.io/)."
+# )
