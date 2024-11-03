@@ -2,7 +2,25 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 
-st.title("The relationship between the possum's age and its tail length using a scatter plot")
+st.title("Supervised Learning, Linear Models, and Loss Functions")
+st.markdown("""
+### Overview
+The purpose of this project is to explore the relationship between different variables in a dataset of possums from Australia and New Guinea. This assignment will give you hands-on experience with linear regression and loss functions.
+""")
+st.subheader("Data Set")
+st.markdown("""
+For this assignment, we will examine data representing possums in Australia and New Guinea. The dataset contains 46 observations on the following 6 variables:
+""")
+st.write("""
+- **sex**: Sex, either m (male) or f (female).
+- **age**: Age in years.
+- **headL**: Head length, in mm.
+- **skullW**: Skull width, in mm.
+- **totalL**: Total length, in cm.
+- **tailL**: Tail length, in cm.
+""")
+
+st.subheader("The relationship between the possum's age and its tail length using a scatter plot")
 # Load data
 df = pd.read_csv('possum.csv')
 
