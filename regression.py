@@ -21,8 +21,6 @@ import numpy as np
 st.title("Linear Model Prediction Function")
 
 st.markdown("""
-### Question 1.2: /5 points
-
 This example demonstrates how to compute predictions using a linear model. The predictions are calculated with the formula:
 
 \\[ y_p = X \\cdot b \\]
