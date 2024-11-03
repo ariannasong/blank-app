@@ -2,6 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 
+st.title("The relationship between the possum's age and its tail length using a scatter plot")
 # Load data
 df = pd.read_csv('possum.csv')
 
