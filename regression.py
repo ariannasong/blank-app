@@ -33,21 +33,30 @@ ax.set_title("Tail Length vs Age")
 
 st.pyplot(fig)
 
-import streamlit as st
-import numpy as np
 
-st.title("Linear Model Prediction Function")
 
-st.markdown("""
-This example demonstrates how to compute predictions using a linear model. The predictions are calculated with the formula:
+# Title and Explanation
+st.header("Linear Model Prediction Function")
 
-\\[ y_p = X \\cdot b \\]
+st.markdown(r"""
+### Task: Implement a Linear Model Prediction Function
+To obtain predictions using a linear model, we use the following formula:
+
+\[
+\hat{y} = \mathbf{X} \hat{\beta}
+\]
 
 where:
-- \\( X \\) is the design matrix, which includes a column of ones.
-- \\( b \\) is the coefficient vector.
+- \( \mathbf{X} \) is the design matrix, which includes a column of ones,
+- \( \hat{\beta} \) is the coefficient vector,
+- \( \hat{y} \) represents the predicted outcomes.
 
-The function `linearModelPredict` will take a coefficient vector `b` and a design matrix `X` and return the predictions.
+Your task is to create a function `linearModelPredict` that:
+- Takes `b`, a 1D array of coefficients, and `X`, a 2D array representing the design matrix.
+- Returns the predictions `y_p` calculated as \( \hat{y} = \mathbf{X} \hat{\beta} \).
+
+### Implementation
+Below is the code for `linearModelPredict` and a test case to verify its accuracy.
 """)
 
 # Define the prediction function
@@ -56,22 +65,32 @@ def linearModelPredict(b, X):
     yp = np.dot(X, b.T)
     return yp
 
-# Sample data
+# Display code snippet
+st.code("""
+def linearModelPredict(b, X):
+    # calculate prediction
+    yp = np.dot(X, b.T)
+    return yp
+""", language="python")
+
+# Test data
 X = np.array([[1, 0], [1, -1], [1, 2]])
 b = np.array([0.1, 0.3])
 
-# Calculate predictions
+# Run function and calculate predictions
 yp = linearModelPredict(b=b, X=X)
 
 # Display results
-st.subheader("Testing the linear model prediction function")
+st.subheader("Test Results")
 st.write("Coefficient vector `b`:", b)
 st.write("Design matrix `X`:\n", X)
 st.write("Predicted values `y_p`:", yp)
 st.write("Dimensionality of `y_p`:", yp.shape)
 
-st.markdown("""
+st.markdown(r"""
 ### Observation
-- Since `X` has 3 rows (data points), the output `y_p` also has 3 values.
-- If `b` were a 2D array, the output dimensions would change accordingly.
+- The dimensionality of `y_p` is 3, corresponding to the 3 rows (data points) in \( \mathbf{X} \).
+- If `b` were a 2D array, the output dimensions of `y_p` would vary depending on its shape.
 """)
+
+
